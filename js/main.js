@@ -13,6 +13,9 @@ const topButton = document.querySelector('.quick-top');
 
 const firstExperience = sections[0];
 
+// 마지막 CTA
+const ctaSection = document.querySelector('.cta-section');
+
 
 // ------------------------------
 // Active Menu
@@ -35,16 +38,34 @@ const setActiveMenu = (id) => {
 const updateQuickMenu = () => {
   if (!firstExperience || !quickWrap) return;
 
-  const rect =
+  const firstRect =
     firstExperience.getBoundingClientRect();
 
-  const showPoint =
-    window.innerHeight * 0.7;
+  const ctaRect =
+    ctaSection?.getBoundingClientRect();
 
-  quickWrap.classList.toggle(
-    'is-visible',
-    rect.top <= showPoint
-  );
+
+  // CTA가 화면에 보이면 무조건 숨김
+  const isCtaInView =
+    ctaRect &&
+    ctaRect.top < window.innerHeight &&
+    ctaRect.bottom > 0;
+
+  if (isCtaInView) {
+    quickWrap.classList.remove('is-visible');
+    return;
+  }
+
+
+  // 첫 번째 Experience 진입 후 표시
+  const showPoint =
+    window.innerHeight * 0.6;
+
+  if (firstRect.top <= showPoint) {
+    quickWrap.classList.add('is-visible');
+  } else {
+    quickWrap.classList.remove('is-visible');
+  }
 };
 
 
@@ -94,6 +115,7 @@ if (trialContent && quickWrap) {
   quickItems.forEach((item) => {
     item.addEventListener('click', (event) => {
       const targetId = item.dataset.target;
+
       const target =
         document.getElementById(targetId);
 
@@ -112,7 +134,7 @@ if (trialContent && quickWrap) {
 
 
   // ------------------------------
-  // Top Button
+  // Top
   // ------------------------------
 
   topButton?.addEventListener('click', () => {

@@ -285,6 +285,7 @@ a {
 }
 .level__item--alphabet .level-card {
   border-color: #367af5;
+  box-shadow: 0 4px 5px 0 #d9e3fd;
 }
 .level__item--alphabet .level-card__label {
   background: #367af5;
@@ -292,8 +293,16 @@ a {
 .level__item--alphabet .level-card__title, .level__item--alphabet .level-card__link {
   color: #367af5;
 }
+.level__item--alphabet .level-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.level__item--alphabet .level-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px #d9e3fd;
+}
 .level__item--phonics .level-card {
   border-color: #e0528d;
+  box-shadow: 0 4px 5px 0 #ffe9fc;
 }
 .level__item--phonics .level-card__label {
   background: #e0528d;
@@ -301,14 +310,29 @@ a {
 .level__item--phonics .level-card__title, .level__item--phonics .level-card__link {
   color: #e0528d;
 }
+.level__item--phonics .level-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.level__item--phonics .level-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px #ffe9fc;
+}
 .level__item--words .level-card {
   border-color: #f58b17;
+  box-shadow: 0 4px 5px 0 #ffefdc;
 }
 .level__item--words .level-card__label {
   background: #f58b17;
 }
 .level__item--words .level-card__title, .level__item--words .level-card__link {
   color: #f58b17;
+}
+.level__item--words .level-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.level__item--words .level-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px #ffefdc;
 }
 
 .level-card {
@@ -510,16 +534,16 @@ a {
 }
 
 #phonics {
-  background: linear-gradient(180deg, #FFF0FC 0%, #fff 75%);
+  background: linear-gradient(180deg, #fff0fc 0%, #fff 75%);
 }
 
 #words {
-  background: linear-gradient(180deg, #FFF3E3 0%, #fff 75%);
+  background: linear-gradient(180deg, #fff3e3 0%, #fff 75%);
 }
 
 .learning-card {
   overflow: hidden;
-  border-radius: 38px;
+  border-radius: 30px;
   background: #fff;
 }
 .learning-card__thumb {
@@ -584,26 +608,26 @@ a {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .blue-shadow:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   box-shadow: 0 14px 32px #d9e3fd;
 }
 
 .pink-shadow {
-  box-shadow: 0 8px 24px #FFE9FC;
+  box-shadow: 0 8px 24px #ffe9fc;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .pink-shadow:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 32px #FFE9FC;
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px #ffe9fc;
 }
 
 .orange-shadow {
-  box-shadow: 0 8px 24px #FFEFDC;
+  box-shadow: 0 8px 24px #ffefdc;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .orange-shadow:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 32px #FFEFDC;
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px #ffefdc;
 }
 
 .quick-wrap {
@@ -697,6 +721,99 @@ a {
 .quick-top:focus-visible {
   outline: 3px solid rgba(54, 122, 245, 0.4);
   outline-offset: 4px;
+}
+
+.cta-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  padding: 110px 24px 120px;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 18%, rgb(43, 21, 191) 0%, rgb(29, 19, 105) 38%, rgb(27, 27, 34) 72%, rgb(30, 30, 30) 100%);
+  color: #fff;
+}
+.cta-section__inner {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  text-align: center;
+}
+.cta-section__title {
+  margin: 0;
+  color: #fff;
+  font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(38px, 3.5vw, 58px);
+  line-height: 1.28;
+  letter-spacing: -0.045em;
+}
+.cta-section__title span {
+  background: linear-gradient(90deg, #367af5, #6444f5 42%, #e0528d 70%, #f58b17);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.cta-section__button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-width: 316px;
+  min-height: 74px;
+  margin-top: 32px;
+  padding: 0 34px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: linear-gradient(#21176f, #21176f) padding-box, linear-gradient(90deg, #367af5, #6444f5, #e0528d, #f58b17) border-box;
+  color: #fff;
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 20px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.cta-section__button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
+}
+.cta-section__button:hover .cta-section__button-arrow {
+  transform: translateX(4px);
+}
+.cta-section__button:focus-visible {
+  outline: 3px solid rgba(54, 122, 245, 0.5);
+  outline-offset: 5px;
+}
+.cta-section__button-arrow {
+  display: inline-block;
+  font-size: 30px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+.cta-section__visual {
+  width: min(530px, 100%);
+  margin: 52px auto 0;
+}
+.cta-section__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 4px solid rgba(255, 255, 255, 0.95);
+  border-radius: 26px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+.cta-section__description {
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.96);
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 20px;
+  line-height: 1.55;
+  letter-spacing: -0.025em;
+}
+.cta-section__description strong {
+  color: #6444f5;
+  font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 @keyframes rail-scroll {

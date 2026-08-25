@@ -42,16 +42,14 @@ a {
 // ==============================
 // Hero
 // ==============================
-#main-content{
+#main-content {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  
-  background: 
-  url("../images/hero-bg.png")
-    center / 1920px auto
-    no-repeat,
+
+  background:
+    url("../images/hero-bg.png") center / 1920px auto no-repeat,
     linear-gradient(
       90deg,
       rgba($color-bg-center, 1) 0%,
@@ -59,21 +57,19 @@ a {
       rgba($color-bg-sub, 1) 70%,
       rgba($color-bg-edge, 1) 100%
     );
-      
 }
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-   &__stage {
+  &__stage {
     position: relative;
 
     width: 100%;
     max-width: 1920px;
     min-height: 1000px;
   }
-
 
   // ------------------------------
   // Content
@@ -186,21 +182,16 @@ a {
     &--point {
       background: $color-keyword-point;
     }
-
-    
   }
- .purple{
-      background: $color-purple;
-      
-    }
- .pink{
-      background: $color-pink;
-      
-    }
- .orange{
-      background: $color-orange;
-      
-    }
+  .purple {
+    background: $color-purple;
+  }
+  .pink {
+    background: $color-pink;
+  }
+  .orange {
+    background: $color-orange;
+  }
 
   // ------------------------------
   // Description
@@ -325,7 +316,7 @@ a {
       width: 315px;
       height: 254px;
       top: 500px;
-      margin-left: -800px; 
+      margin-left: -800px;
 
       animation: float-b 5.7s ease-in-out infinite;
     }
@@ -446,8 +437,7 @@ a {
   &__list {
     display: grid;
 
-    grid-template-columns:
-      repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 24px;
 
@@ -464,6 +454,7 @@ a {
     &--alphabet {
       .level-card {
         border-color: $color-blue;
+        box-shadow: 0 4px 5px 0 #d9e3fd;
 
         &__label {
           background: $color-blue;
@@ -473,6 +464,14 @@ a {
         &__link {
           color: $color-blue;
         }
+        transition:
+          transform $transition,
+          box-shadow $transition;
+
+        &:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 14px 32px #d9e3fd;
+        }
       }
     }
 
@@ -480,6 +479,7 @@ a {
     &--phonics {
       .level-card {
         border-color: $color-pink;
+        box-shadow: 0 4px 5px 0 #ffe9fc;
 
         &__label {
           background: $color-pink;
@@ -489,6 +489,14 @@ a {
         &__link {
           color: $color-pink;
         }
+        transition:
+          transform $transition,
+          box-shadow $transition;
+
+        &:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 14px 32px #ffe9fc;
+        }
       }
     }
 
@@ -496,6 +504,7 @@ a {
     &--words {
       .level-card {
         border-color: $color-orange;
+        box-shadow: 0 4px 5px 0 #ffefdc;
 
         &__label {
           background: $color-orange;
@@ -504,6 +513,14 @@ a {
         &__title,
         &__link {
           color: $color-orange;
+        }
+        transition:
+          transform $transition,
+          box-shadow $transition;
+
+        &:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 14px 32px #ffefdc;
         }
       }
     }
@@ -515,7 +532,7 @@ a {
   flex-direction: column;
   align-items: center;
   min-height: 600px;
-  padding:  62px 32px 40px;
+  padding: 62px 32px 40px;
   overflow: hidden;
   border: 2px solid;
   border-radius: 36px;
@@ -534,18 +551,11 @@ a {
 
     min-width: 116px;
 
-    padding:
-      9px
-      18px;
+    padding: 9px 18px;
 
-    transform:
-      translateX(-50%);
+    transform: translateX(-50%);
 
-    border-radius:
-      0
-      0
-      12px
-      12px;
+    border-radius: 0 0 12px 12px;
 
     color: $color-white;
 
@@ -627,24 +637,19 @@ a {
     span {
       font-size: 24px;
 
-      transition:
-        transform $transition;
+      transition: transform $transition;
     }
 
     &:hover {
-      transform:
-        translateY(-2px);
+      transform: translateY(-2px);
 
       span {
-        transform:
-          translateX(5px);
+        transform: translateX(5px);
       }
     }
 
     &:focus-visible {
-      outline:
-        3px solid
-        currentColor;
+      outline: 3px solid currentColor;
 
       outline-offset: 5px;
 
@@ -676,7 +681,6 @@ a {
   border: 0;
 }
 
-
 // ==============================
 // Trial Content
 // ==============================
@@ -684,7 +688,6 @@ a {
 .trial-content {
   position: relative;
 }
-
 
 // ==============================
 // Experience
@@ -699,9 +702,15 @@ a {
 
   scroll-margin-top: 40px;
 
-  .blue{color: $color-blue;}
-  .pink{color: $color-pink;}
-  .orange{color: $color-orange;}
+  .blue {
+    color: $color-blue;
+  }
+  .pink {
+    color: $color-pink;
+  }
+  .orange {
+    color: $color-orange;
+  }
 
   &__inner {
     width: 100%;
@@ -733,7 +742,6 @@ a {
     }
   }
 
-
   &__description {
     margin: 12px 0 0;
 
@@ -751,8 +759,7 @@ a {
   &__cards {
     display: grid;
 
-    grid-template-columns:
-      repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     gap: 24px;
 
@@ -790,84 +797,64 @@ a {
   // ------------------------------
 
   &__rail {
-  width: 100%;
+    width: 100%;
 
-  margin-top: 18px;
+    margin-top: 18px;
 
-  overflow: hidden;
-}
+    overflow: hidden;
+  }
 
-&__rail-track {
-  display: flex;
+  &__rail-track {
+    display: flex;
 
-  width: max-content;
+    width: max-content;
 
-  animation:
-    rail-scroll
-    35s
-    linear
-    infinite;
+    animation: rail-scroll 35s linear infinite;
 
-  will-change: transform;
-}
+    will-change: transform;
+  }
 
-&__rail-set {
-  display: flex;
+  &__rail-set {
+    display: flex;
 
-  flex: 0 0 auto;
-
-  gap: 14px;
-
-  // 두 세트 사이 간격도 기존 gap과 동일하게
-  padding-right: 14px;
-
-  img {
     flex: 0 0 auto;
 
-    width: 190px;
-    height: 110px;
+    gap: 14px;
 
-    border-radius: 10px;
+    // 두 세트 사이 간격도 기존 gap과 동일하게
+    padding-right: 14px;
 
-    object-fit: cover;
+    img {
+      flex: 0 0 auto;
+
+      width: 190px;
+      height: 110px;
+
+      border-radius: 10px;
+
+      object-fit: cover;
+    }
+  }
+
+  @keyframes rail-scroll {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
   }
 }
-
-@keyframes rail-scroll {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
+#alphabet {
+  background: linear-gradient(180deg, #f3f6ff 0%, #fff 75%);
 }
+#phonics {
+  background: linear-gradient(180deg, #fff0fc 0%, #fff 75%);
 }
-#alphabet{
-  background:
-    linear-gradient(
-      180deg,
-      #f3f6ff 0%,
-      #fff 75%
-    );
+#words {
+  background: linear-gradient(180deg, #fff3e3 0%, #fff 75%);
 }
-#phonics{
-  background:
-    linear-gradient(
-      180deg,
-      #FFF0FC 0%,
-      #fff 75%
-    );
-}
-#words{
-  background:
-    linear-gradient(
-      180deg,
-      #FFF3E3 0%,
-      #fff 75%
-    );
-}
-
 
 // ==============================
 // Learning Card
@@ -876,11 +863,9 @@ a {
 .learning-card {
   overflow: hidden;
 
-  border-radius: 38px;
+  border-radius: 30px;
 
   background: $color-white;
-
-  
 
   &__thumb {
     width: 100%;
@@ -944,9 +929,7 @@ a {
     span {
       font-size: 22px;
 
-      transition:
-        transform
-        $transition;
+      transition: transform $transition;
     }
 
     &:hover span {
@@ -954,9 +937,7 @@ a {
     }
 
     &:focus-visible {
-      outline:
-        3px solid
-        rgba($color-blue, 0.4);
+      outline: 3px solid rgba($color-blue, 0.4);
 
       outline-offset: 5px;
 
@@ -964,60 +945,47 @@ a {
     }
   }
 }
-.blue-shadow{
-  box-shadow:
-    0 8px 24px
-    #d9e3fd;
+.blue-shadow {
+  box-shadow: 0 8px 24px #d9e3fd;
 
   transition:
     transform $transition,
     box-shadow $transition;
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 
-    box-shadow:
-      0 14px 32px
-      #d9e3fd;
+    box-shadow: 0 14px 32px #d9e3fd;
   }
 }
 
-.pink-shadow{
-  box-shadow:
-    0 8px 24px
-    #FFE9FC;
+.pink-shadow {
+  box-shadow: 0 8px 24px #ffe9fc;
 
   transition:
     transform $transition,
     box-shadow $transition;
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 
-    box-shadow:
-      0 14px 32px
-      #FFE9FC;
+    box-shadow: 0 14px 32px #ffe9fc;
   }
 }
 
-.orange-shadow{
-  box-shadow:
-    0 8px 24px
-    #FFEFDC;
+.orange-shadow {
+  box-shadow: 0 8px 24px #ffefdc;
 
   transition:
     transform $transition,
     box-shadow $transition;
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 
-    box-shadow:
-      0 14px 32px
-      #FFEFDC;
+    box-shadow: 0 14px 32px #ffefdc;
   }
 }
-
 
 // ==============================
 // Quick Menu wrap
@@ -1035,9 +1003,7 @@ a {
 
   gap: 16px;
 
-  transform:
-    translateY(-50%)
-    translateX(20px);
+  transform: translateY(-50%) translateX(20px);
 
   opacity: 0;
   visibility: hidden;
@@ -1049,16 +1015,13 @@ a {
     visibility 0.3s ease;
 
   &.is-visible {
-    transform:
-      translateY(-50%)
-      translateX(0);
+    transform: translateY(-50%) translateX(0);
 
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
   }
 }
-
 
 // ==============================
 // Quick Menu
@@ -1075,9 +1038,7 @@ a {
 
   background: rgba($color-white, 0.94);
 
-  box-shadow:
-    0 6px 20px
-    rgba(40, 50, 100, 0.12);
+  box-shadow: 0 6px 20px rgba(40, 50, 100, 0.12);
 
   &__item {
     display: flex;
@@ -1136,7 +1097,6 @@ a {
   }
 }
 
-
 // ==============================
 // Top Button
 // ==============================
@@ -1163,9 +1123,7 @@ a {
 
   cursor: pointer;
 
-  box-shadow:
-    0 6px 18px
-    rgba($color-primary, 0.25);
+  box-shadow: 0 6px 18px rgba($color-primary, 0.25);
 
   transition:
     transform $transition,
@@ -1176,15 +1134,202 @@ a {
   }
 
   &:focus-visible {
-    outline:
-      3px solid
-      rgba($color-blue, 0.4);
+    outline: 3px solid rgba($color-blue, 0.4);
 
     outline-offset: 4px;
   }
 }
 
 
+// ==============================
+// CTA Section
+// ==============================
+
+.cta-section {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100svh;
+
+  padding: 110px 24px 120px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 18%,
+      rgba(43, 21, 191, 1) 0%,
+      rgba(29, 19, 105, 1) 38%,
+      rgba(27, 27, 34, 1) 72%,
+      rgba(30, 30, 30, 1) 100%
+    );
+
+  color: $color-white;
+
+  &__inner {
+    width: 100%;
+    max-width: 1160px;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  // ------------------------------
+  // Title
+  // ------------------------------
+
+  &__title {
+    margin: 0;
+
+    color: $color-white;
+
+    font-family: $font-heavy;
+    font-size: clamp(38px, 3.5vw, 58px);
+    line-height: 1.28;
+    letter-spacing: -0.045em;
+
+    span {
+      background:
+        linear-gradient(
+          90deg,
+          $color-blue,
+          $color-purple 42%,
+          $color-pink 70%,
+          $color-orange
+        );
+
+      background-clip: text;
+      -webkit-background-clip: text;
+
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  // ------------------------------
+  // Button
+  // ------------------------------
+
+  &__button {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    min-width: 316px;
+    min-height: 74px;
+
+    margin-top: 32px;
+    padding: 0 34px;
+
+    border: 2px solid transparent;
+    border-radius: $radius-full;
+
+    background:
+      linear-gradient(#21176f, #21176f) padding-box,
+      linear-gradient(
+        90deg,
+        $color-blue,
+        $color-purple,
+        $color-pink,
+        $color-orange
+      ) border-box;
+
+    color: $color-white;
+
+    font-family: $font-bold;
+    font-size: 20px;
+
+    box-shadow:
+      0 12px 26px rgba(0, 0, 0, 0.18);
+
+    transition:
+      transform $transition,
+      box-shadow $transition;
+
+    &:hover {
+      transform: translateY(-4px);
+
+      box-shadow:
+        0 18px 34px rgba(0, 0, 0, 0.28);
+
+      .cta-section__button-arrow {
+        transform: translateX(4px);
+      }
+    }
+
+    &:focus-visible {
+      outline:
+        3px solid
+        rgba($color-blue, 0.5);
+
+      outline-offset: 5px;
+    }
+  }
+
+  &__button-arrow {
+    display: inline-block;
+
+    font-size: 30px;
+    line-height: 1;
+
+    transition:
+      transform $transition;
+  }
+
+  // ------------------------------
+  // Visual
+  // ------------------------------
+
+  &__visual {
+    width: min(530px, 100%);
+
+    margin: 52px auto 0;
+
+    img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      border:
+        4px solid
+        rgba($color-white, 0.95);
+
+      border-radius: 26px;
+
+      box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  // ------------------------------
+  // Description
+  // ------------------------------
+
+  &__description {
+    margin: 28px 0 0;
+
+    color: rgba($color-white, 0.96);
+
+    font-family: $font-bold;
+    font-size: 20px;
+    line-height: 1.55;
+    letter-spacing: -0.025em;
+
+    strong {
+      color: $color-purple;
+      font-family: $font-heavy;
+    }
+  }
+}
 
 // ==============================
 // Animation
@@ -1199,9 +1344,6 @@ a {
     transform: translateX(-50%);
   }
 }
-
-
-
 
 // ==============================
 // Animation
