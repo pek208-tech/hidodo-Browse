@@ -39,6 +39,14 @@ a {
   background: url("../images/hero-bg.png") center/1920px auto no-repeat, linear-gradient(90deg, #cfdefa 0%, #cfdefa 40%, #d2cbfb 70%, #d2cbfb 100%);
 }
 
+.pc {
+  display: block;
+}
+
+.mo {
+  display: none;
+}
+
 .hero {
   display: flex;
   align-items: center;
@@ -238,7 +246,7 @@ a {
 }
 
 .level {
-  padding: 180px 24px 180px;
+  padding: 130px 0px 130px;
 }
 .level__inner {
   width: 100%;
@@ -434,7 +442,7 @@ a {
 
 .experience {
   position: relative;
-  padding: 180px 24px 180px;
+  padding: 130px 0px 130px;
   overflow: hidden;
   scroll-margin-top: 40px;
 }
@@ -500,6 +508,24 @@ a {
   width: 100%;
   margin-top: 18px;
   overflow: hidden;
+  position: relative;
+}
+.experience__rail::before, .experience__rail::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 150px;
+  height: 113px;
+  pointer-events: none;
+}
+.experience__rail::before {
+  left: 0;
+  background: url("../images/gradation-l.png") left center/contain no-repeat;
+}
+.experience__rail::after {
+  right: 0;
+  background: url("../images/gradation-r.png") right center/contain no-repeat;
 }
 .experience__rail-track {
   display: flex;
@@ -728,8 +754,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100svh;
-  padding: 110px 24px 120px;
+  padding: 130px 0px 180px;
   overflow: hidden;
   background: radial-gradient(circle at 50% 18%, rgb(43, 21, 191) 0%, rgb(29, 19, 105) 38%, rgb(27, 27, 34) 72%, rgb(30, 30, 30) 100%);
   color: #fff;
@@ -743,12 +768,13 @@ a {
 .cta-section__title {
   margin: 0;
   color: #fff;
-  font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: clamp(38px, 3.5vw, 58px);
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(30px, 3.5vw, 58px);
   line-height: 1.28;
   letter-spacing: -0.045em;
 }
 .cta-section__title span {
+  font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: linear-gradient(90deg, #367af5, #6444f5 42%, #e0528d 70%, #f58b17);
   background-clip: text;
   -webkit-background-clip: text;
@@ -792,7 +818,7 @@ a {
   transition: transform 0.25s ease;
 }
 .cta-section__visual {
-  width: min(530px, 100%);
+  width: min(364px, 100%);
   margin: 52px auto 0;
 }
 .cta-section__visual img {
@@ -814,6 +840,86 @@ a {
 .cta-section__description strong {
   color: #6444f5;
   font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.bottom-banner {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  margin: 0 auto;
+  width: 1160px;
+  height: 80px;
+}
+.bottom-banner__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 0 52px;
+  border-radius: 30px 30px 0 0;
+  color: #fff;
+  text-decoration: none;
+}
+.bottom-banner__item--trial {
+  background: linear-gradient(110deg, #d93e98 0%, #8c24c8 55%, #6321d0 100%);
+}
+.bottom-banner__item--preview {
+  background: linear-gradient(110deg, #cadcff 0%, #d8d8ff 50%, #cabaff 100%);
+  color: #111;
+}
+.bottom-banner__text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.bottom-banner__title {
+  display: block;
+  font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  margin-top: 4px;
+}
+.bottom-banner__title em {
+  font-style: normal;
+}
+.bottom-banner__item--trial .bottom-banner__title em {
+  color: #fff36a;
+}
+.bottom-banner__item--preview .bottom-banner__title em {
+  background: linear-gradient(90deg, #367af5, #6444f5, #f58b17);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.bottom-banner__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.bottom-banner__link span {
+  display: inline-block;
+  font-size: 24px;
+  transition: transform 0.25s ease;
+}
+.bottom-banner__character {
+  position: absolute;
+  right: 55px;
+  bottom: 0;
+  width: auto;
+  max-height: 85px;
+  object-fit: contain;
+  pointer-events: none;
+}
+.bottom-banner__item:hover .bottom-banner__link span {
+  transform: translateX(4px);
 }
 
 @keyframes rail-scroll {
@@ -846,5 +952,494 @@ a {
   }
   50% {
     transform: translateY(-12px);
+  }
+}
+@media (max-width: 1440px) {
+  #main-content {
+    background: url("../images/hero-bg.png") center/cover no-repeat;
+  }
+  .hero__stage {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-height: 820px;
+  }
+  .hero__visual--movie {
+    width: 260px;
+    margin-left: -500px;
+    top: 180px;
+  }
+  .hero__visual--book {
+    width: 300px;
+    margin-left: -610px;
+    top: 400px;
+  }
+  .hero__visual--game {
+    width: 180px;
+    margin-left: 260px;
+    top: 30px;
+  }
+  .hero__visual--studio {
+    width: 240px;
+    margin-left: 400px;
+    top: 210px;
+  }
+  .level {
+    padding: 100px 0px 100px;
+  }
+  .level__inner {
+    max-width: 1000px;
+  }
+  .level__list {
+    gap: 20px;
+  }
+  .level-card {
+    min-height: 520px;
+  }
+  .level-card__image {
+    height: 180px;
+    margin-top: 28px;
+  }
+  .experience {
+    padding: 100px 0px 100px;
+  }
+  .experience__inner {
+    max-width: 1000px;
+  }
+  .experience__cards {
+    gap: 18px;
+  }
+  .quick-wrap {
+    right: 5px;
+  }
+  .cta-section {
+    padding: 100px 0px 140px;
+  }
+  .cta-section__inner {
+    max-width: 1000px;
+  }
+  .bottom-banner {
+    width: 1000px;
+  }
+}
+@media (max-width: 1200px) {
+  #main-content {
+    background: url("../images/hero-bg.png") center/cover no-repeat;
+  }
+  .hero__stage {
+    min-height: 780px;
+  }
+  .hero__visual--movie {
+    width: 240px;
+    margin-left: -460px;
+    top: 180px;
+  }
+  .hero__visual--book {
+    width: 280px;
+    margin-left: -570px;
+    top: 380px;
+  }
+  .hero__visual--game {
+    width: 160px;
+    margin-left: 200px;
+    top: 30px;
+  }
+  .hero__visual--studio {
+    width: 220px;
+    margin-left: 340px;
+    top: 210px;
+  }
+  .level {
+    padding: 70px 0px 70px;
+  }
+  .level__inner {
+    max-width: 900px;
+  }
+  .level__list {
+    gap: 20px;
+  }
+  .level-card {
+    min-height: 460px;
+  }
+  .level-card__image {
+    height: 160px;
+    margin-top: 20px;
+  }
+  .level-card__label {
+    font-size: 12px;
+    padding: 6px 15px;
+  }
+  .level-card__title {
+    font-size: 26px;
+  }
+  .level-card__description {
+    font-size: 14px;
+    margin: 10px 0 0;
+  }
+  .level-card__link {
+    font-size: 16px;
+  }
+  .experience {
+    padding: 70px 0px 70px;
+  }
+  .experience__title {
+    font-size: 36px;
+  }
+  .experience__inner {
+    max-width: 900px;
+  }
+  .experience__cards {
+    gap: 18px;
+  }
+  .experience__rail {
+    margin-top: 8px;
+  }
+  .experience__rail::before, .experience__rail::after {
+    height: 73px;
+  }
+  .experience__description {
+    margin: 6px 0 0;
+    font-size: 18px;
+  }
+  .experience__rail-set {
+    gap: 10px;
+  }
+  .experience__rail-set img {
+    width: 130px;
+    height: auto;
+    gap: 10px;
+  }
+  .experience__header {
+    margin-bottom: 30px;
+  }
+  .experience__more {
+    margin-top: 60px;
+    margin-bottom: 10px;
+  }
+  .learning-card__title {
+    font-size: 24px;
+  }
+  .learning-card__description {
+    font-size: 14px;
+  }
+  .learning-card__link {
+    font-size: 14px;
+  }
+  .quick-wrap {
+    right: 5px;
+  }
+  .cta-section {
+    padding: 70px 0px 140px;
+  }
+  .cta-section__inner {
+    max-width: 900px;
+  }
+  .bottom-banner {
+    width: 900px;
+  }
+}
+@media (max-width: 1024px) {
+  #main-content {
+    background: url("../images/hero-bg.png") center/cover no-repeat;
+  }
+  .hero__stage {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-height: 720px;
+  }
+  .hero__visual--movie {
+    width: 220px;
+    margin-left: -420px;
+    top: 160px;
+  }
+  .hero__visual--book {
+    width: 260px;
+    margin-left: -500px;
+    top: 350px;
+  }
+  .hero__visual--game {
+    width: 140px;
+    margin-left: 160px;
+    top: 40px;
+  }
+  .hero__visual--studio {
+    width: 200px;
+    margin-left: 300px;
+    top: 200px;
+  }
+  .level {
+    padding: 60px 0px 60px;
+  }
+  .level__header {
+    margin-bottom: 50px;
+  }
+  .level__inner {
+    max-width: 800px;
+  }
+  .level__title {
+    font-size: 32px;
+  }
+  .level__description {
+    margin: 6px 0 0;
+  }
+  .level-card {
+    min-height: 360px;
+    border-radius: 26px;
+  }
+  .level-card__image {
+    height: 120px;
+  }
+  .level-card__title {
+    font-size: 22px;
+  }
+  .level-card__link {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .experience {
+    padding: 60px 0px 60px;
+  }
+  .experience__title {
+    font-size: 30px;
+  }
+  .experience__inner {
+    max-width: 800px;
+  }
+  .experience__more {
+    margin-top: 40px;
+  }
+  .experience__more-title {
+    font-size: 20px;
+  }
+  .learning-card {
+    border-radius: 26px;
+  }
+  .learning-card__title {
+    font-size: 20px;
+  }
+  .learning-card__content {
+    padding: 22px 0px 26px;
+  }
+  .learning-card__link span {
+    width: 12px;
+  }
+  .learning-card__category {
+    margin-bottom: 4px;
+  }
+  .quick-wrap {
+    gap: 10px;
+  }
+  .quick-menu {
+    border-radius: 18px;
+  }
+  .quick-menu__item {
+    font-size: 10px;
+    gap: 0px;
+    width: 60px;
+    padding: 8px 2px;
+    border-radius: 16px;
+  }
+  .quick-top {
+    width: 34px;
+    height: 34px;
+  }
+  .quick-top img {
+    width: 16px;
+    height: 16px;
+  }
+  .cta-section {
+    padding: 60px 0px 140px;
+  }
+  .cta-section__inner {
+    max-width: 800px;
+  }
+  .cta-section__button {
+    min-width: 280px;
+    min-height: 65px;
+    font-size: 18px;
+  }
+  .bottom-banner {
+    width: 800px;
+    height: 70px;
+  }
+  .bottom-banner__item {
+    padding: 0 30px;
+    border-radius: 20px 20px 0 0;
+  }
+  .bottom-banner__text {
+    gap: 2px;
+  }
+  .bottom-banner__title {
+    font-size: 16px;
+  }
+  .bottom-banner__link {
+    font-size: 12px;
+  }
+  .bottom-banner__character {
+    max-height: 80px;
+    right: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .pc {
+    display: none;
+  }
+  .mo {
+    display: block;
+  }
+  .hero__description {
+    font-size: 18px;
+  }
+  .hero__stage {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-height: 720px;
+  }
+  .hero__visual--movie {
+    width: 110px;
+    margin-left: -200px;
+    top: 160px;
+  }
+  .hero__visual--book {
+    width: 120px;
+    margin-left: -220px;
+    top: 280px;
+  }
+  .hero__visual--game {
+    width: 80px;
+    margin-left: 80px;
+    top: 90px;
+  }
+  .hero__visual--studio {
+    width: 100px;
+    margin-left: 120px;
+    top: 180px;
+  }
+  .hero__keywords {
+    margin-top: 24px;
+    gap: 3px;
+  }
+  .hero__keyword {
+    padding: 2px 10px;
+    font-size: 14px;
+    min-height: 32px;
+  }
+  .hero__cta {
+    min-height: 60px;
+    gap: 8px;
+  }
+  .level {
+    padding: 80px 24px 80px;
+  }
+  .level__header {
+    margin-bottom: 30px;
+  }
+  .level__title {
+    font-size: 30px;
+  }
+  .level__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .level__description {
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 10px 0 0;
+  }
+  .level-card__title {
+    font-size: 26px;
+    font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .level-card__image {
+    height: 140px;
+  }
+  .level-card__description {
+    font-size: 18px;
+    margin: 8px 0 0;
+  }
+  .level-card__link {
+    font-size: 18px;
+  }
+  .experience {
+    padding: 80px 0 80px;
+  }
+  .experience__cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin: 0 24px;
+  }
+  .experience__more {
+    margin: 40px 24px 0;
+  }
+  .experience__rail-set img {
+    width: 100px;
+  }
+  .experience__description {
+    font-size: 20px;
+  }
+  .experience__rail {
+    margin-top: 14px;
+  }
+  .learning-card__title {
+    font-size: 26px;
+  }
+  .learning-card__description {
+    font-size: 16px;
+  }
+  .quick-wrap {
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: transform 0.35s ease, opacity 0.25s ease, visibility 0.35s;
+  }
+  .quick-wrap.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .quick-menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 6px;
+    border-radius: 100px;
+  }
+  .quick-menu__item {
+    flex: 1;
+    min-width: 0;
+    flex-direction: row;
+    height: 60px;
+    gap: 5px;
+    border-radius: 100px;
+    font-size: 18px;
+  }
+  .quick-top {
+    display: none;
+  }
+  .cta-section__button {
+    margin-top: 24px;
+  }
+  .bottom-banner {
+    width: 100%;
+  }
+  .bottom-banner__item {
+    justify-content: center;
+  }
+  .bottom-banner__item img {
+    display: none;
+  }
+  .bottom-banner__text {
+    text-align: center;
+  }
+  .bottom-banner__link {
+    display: none;
+  }
+  .bottom-banner__title {
+    margin-top: 0px;
+    line-height: 1.4;
   }
 }

@@ -19,10 +19,10 @@ $color-text-sub: #666;
 $color-white: #fff;
 
 // Background
-$color-bg-center: #CFDEFA;
-$color-bg-middle: #CFDEFA;
-$color-bg-sub: #D2CBFB;
-$color-bg-edge: #D2CBFB;
+$color-bg-center: #cfdefa;
+$color-bg-middle: #cfdefa;
+$color-bg-sub: #d2cbfb;
+$color-bg-edge: #d2cbfb;
 
 // Keyword
 $color-keyword: #745af6;
@@ -47,8 +47,19 @@ $mobile: 768px;
 
 $radius-sm: 8px;
 $radius-full: 999px;
-
 $transition: 0.25s ease;
+
+$blank: 130px;
+$desktop-blank: 100px;
+$laptop-blank: 70px;
+$tablet-blank: 60px;
+$mobile-blank: 80px;
+
+$content-width:1160px;
+$desktop-content-width:1000px;
+$laptop-content-width:900px;
+$tablet-content-width:800px;
+
 
 // ==============================
 // Font
@@ -88,3 +99,5 @@ $font-heavy:
   BlinkMacSystemFont,
   "Segoe UI",
   sans-serif;
+
+
