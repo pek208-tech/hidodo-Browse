@@ -1370,6 +1370,9 @@ a {
     &__inner {
       max-width: $desktop-content-width;
     }
+    &__description {
+      margin: 10px 0 0;
+    }
   }
   .level__list {
     gap: 20px;

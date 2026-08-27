@@ -999,6 +999,9 @@ a {
   .level__inner {
     max-width: 1000px;
   }
+  .level__description {
+    margin: 10px 0 0;
+  }
   .level__list {
     gap: 20px;
   }
