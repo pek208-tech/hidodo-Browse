@@ -1320,22 +1320,22 @@ a {
   .hero__visual--movie {
     width: 110px;
     margin-left: -180px;
-    top: 140px;
+    top: 120px;
   }
   .hero__visual--book {
     width: 100px;
     margin-left: -200px;
-    top: 230px;
+    top: 210px;
   }
   .hero__visual--game {
-    width: 80px;
+    width: 70px;
     margin-left: 80px;
-    top: 90px;
+    top: 50px;
   }
   .hero__visual--studio {
     width: 100px;
-    margin-left: 120px;
-    top: 180px;
+    margin-left: 110px;
+    top: 120px;
   }
   .hero__keywords {
     margin-top: 24px;
