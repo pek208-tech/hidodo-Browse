@@ -9,6 +9,12 @@ $color-primary-dark: #3f23dc;
 // Point
 $color-blue: #367af5;
 $color-purple: #6444f5;
+$color-purple-gradation: linear-gradient(
+  90deg,
+  #7b68ff,
+  #d9d3ff
+);
+
 $color-pink: #e0528d;
 $color-orange: #f58b17;
 
@@ -92,7 +98,7 @@ $mobile-text-lg:16px;
 //$mobile-text-md:15px;
 $mobile-text-sm:14px;
 $mobile-text-xsm:13px;
-$mobile-text-xxsm:10px;
+$mobile-text-xxsm:11px;
 
 
 

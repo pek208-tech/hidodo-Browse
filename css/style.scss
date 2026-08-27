@@ -1145,7 +1145,14 @@ a {
     line-height: 1.55;
     letter-spacing: -0.025em;
     strong {
-      color: $color-purple;
+      background: linear-gradient(90deg, #7b68ff, #d9d3ff);
+
+      background-clip: text;
+      -webkit-background-clip: text;
+
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+
       font-family: $font-heavy;
     }
   }
@@ -1751,6 +1758,7 @@ a {
       padding: 0px 10px;
       min-height: 30px;
       font-size: $mobile-text-xsm;
+      border-radius: 6px;
     }
     &__description {
       font-size: $mobile-text-lg;
@@ -1761,19 +1769,18 @@ a {
       gap: 8px;
       font-size: $mobile-text-lg;
       min-width: calc(100% - 160px);
-      
     }
-    .hero__cta-icon {
+    &__cta-icon {
       width: 20px;
     }
     &__caption {
       font-size: $mobile-text-xsm;
     }
     &__title-main,
-    &__title-gradient{
+    &__title-gradient {
       font-size: $mobile-title-xl;
     }
-    &__title-main{
+    &__title-main {
       margin-bottom: 4px;
     }
   }
@@ -1800,7 +1807,8 @@ a {
     min-height: 340px;
     &__label {
       min-width: 100px;
-    } 
+      font-size: $mobile-text-xxsm;
+    }
     &__title {
       font-family: $font-bold;
       font-size: $mobile-title-sm;
@@ -1814,8 +1822,8 @@ a {
     }
     &__link {
       font-size: $mobile-text-sm;
-      span{
-        img{
+      span {
+        img {
           width: 14px;
         }
       }
@@ -1831,7 +1839,13 @@ a {
     &__more {
       margin: 40px 24px 0;
     }
-
+    &__rail {
+      &::before,
+      &::after {
+        width: 76px;
+        top: -15px;
+      }
+    }
     &__rail-set {
       img {
         width: 90px;
@@ -1909,11 +1923,11 @@ a {
       border-radius: 100px;
       font-size: $text-xsm;
       font-family: $font-extra-bold;
-      span{
+      span {
         width: 100%;
         padding-right: 13px;
       }
-      img{
+      img {
         width: 38px;
         height: 38px;
       }
@@ -1937,8 +1951,8 @@ a {
       font-size: $mobile-text-lg;
       min-width: calc(100% - 160px);
       min-height: 60px;
-      gap:10px;
-      img{
+      gap: 10px;
+      img {
         width: 20px;
       }
     }
