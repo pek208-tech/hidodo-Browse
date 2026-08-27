@@ -1351,10 +1351,13 @@ a {
     line-height: 1.4;
   }
   .hero__cta {
-    min-height: 50px;
+    min-height: 60px;
     gap: 8px;
     font-size: 16px;
     min-width: calc(100% - 160px);
+  }
+  .hero .hero__cta-icon {
+    width: 20px;
   }
   .hero__caption {
     font-size: 13px;
@@ -1401,6 +1404,9 @@ a {
   }
   .level-card__link {
     font-size: 14px;
+  }
+  .level-card__link span img {
+    width: 14px;
   }
   .experience {
     padding: 80px 0 80px;
@@ -1496,11 +1502,11 @@ a {
   .cta-section__button {
     font-size: 16px;
     min-width: calc(100% - 160px);
-    min-height: 50px;
+    min-height: 60px;
     gap: 10px;
   }
   .cta-section__button img {
-    width: 18px;
+    width: 20px;
   }
   .cta-section__visual {
     width: calc(100% - 48px);
