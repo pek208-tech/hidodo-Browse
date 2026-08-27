@@ -5,7 +5,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 30px;
 }
 
 body {
@@ -135,7 +135,7 @@ a {
   color: #333;
   font-size: 24px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.28;
   font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 .hero__cta {
@@ -183,7 +183,7 @@ a {
 .hero__caption {
   margin: 14px 0 0;
   color: #666;
-  font-size: 15px;
+  font-size: 14px;
 }
 .hero__visual {
   position: absolute;
@@ -277,7 +277,7 @@ a {
   margin: 14px 0 0;
   color: #333;
   font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.5;
 }
 .level__list {
@@ -404,7 +404,7 @@ a {
   gap: 8px;
   margin-top: auto;
   font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 .level-card__link span {
@@ -498,7 +498,7 @@ a {
   color: #111;
   font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 26px;
-  line-height: 1.4;
+  line-height: 1;
 }
 .experience__more-title span {
   color: #367af5;
@@ -617,7 +617,7 @@ a {
   font-size: 16px;
 }
 .learning-card__link span {
-  font-size: 22px;
+  font-size: 20px;
   transition: transform 0.25s ease;
 }
 .learning-card__link:hover span {
@@ -660,7 +660,7 @@ a {
   position: fixed;
   z-index: 50;
   top: 50%;
-  right: 32px;
+  right: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -736,7 +736,6 @@ a {
   background: #4930ef;
   color: #fff;
   font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 24px;
   cursor: pointer;
   box-shadow: 0 6px 18px rgba(73, 48, 239, 0.25);
   transition: transform 0.25s ease, background 0.25s ease;
@@ -769,8 +768,8 @@ a {
   margin: 0;
   color: #fff;
   font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 40px;
-  line-height: 1.28;
+  font-size: 56px;
+  line-height: 1.4;
   letter-spacing: -0.045em;
 }
 .cta-section__title span {
@@ -795,7 +794,7 @@ a {
   border-radius: 999px;
   background: linear-gradient(#21176f, #21176f) padding-box, linear-gradient(90deg, #367af5, #6444f5, #e0528d, #f58b17) border-box;
   color: #fff;
-  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "NanumSquareNeoExtraBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 20px;
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -813,12 +812,11 @@ a {
 }
 .cta-section__button-arrow {
   display: inline-block;
-  font-size: 30px;
   line-height: 1;
   transition: transform 0.25s ease;
 }
 .cta-section__visual {
-  width: min(364px, 100%);
+  width: 642px;
   margin: 52px auto 0;
 }
 .cta-section__visual img {
@@ -875,15 +873,15 @@ a {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 1px;
 }
 .bottom-banner__title {
   display: block;
   font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 1.2;
   letter-spacing: -0.04em;
-  margin-top: 4px;
+  margin-top: 12px;
 }
 .bottom-banner__title em {
   font-style: normal;
@@ -909,6 +907,7 @@ a {
   align-items: center;
   gap: 1px;
   font-family: "NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
 }
 .bottom-banner__link span {
   display: inline-block;
@@ -1055,41 +1054,59 @@ a {
     margin-left: 340px;
     top: 210px;
   }
+  .hero__title-main, .hero__title-gradient {
+    font-size: 56px;
+  }
+  .hero__keyword {
+    font-size: 14px;
+  }
+  .hero__description {
+    font-size: 20px;
+  }
+  .hero__cta {
+    font-size: 18px;
+  }
   .level {
     padding: 70px 0px 70px;
   }
   .level__inner {
     max-width: 900px;
   }
+  .level__title {
+    font-size: 36px;
+  }
+  .level__description {
+    font-size: 20px;
+  }
   .level__list {
-    gap: 20px;
+    gap: 10px;
   }
   .level-card {
     min-height: 460px;
   }
   .level-card__image {
     height: 160px;
-    margin-top: 20px;
-  }
-  .level-card__label {
-    font-size: 12px;
-    padding: 6px 15px;
+    margin-top: 10px;
   }
   .level-card__title {
-    font-size: 26px;
+    font-size: 24px;
   }
   .level-card__description {
     font-size: 14px;
-    margin: 10px 0 0;
   }
   .level-card__link {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  .level-card__label {
+    padding: 6px 15px;
+    font-size: 11px;
+  }
+  .level-card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
   }
   .experience {
     padding: 70px 0px 70px;
-  }
-  .experience__title {
-    font-size: 36px;
   }
   .experience__inner {
     max-width: 900px;
@@ -1103,9 +1120,15 @@ a {
   .experience__rail::before, .experience__rail::after {
     height: 73px;
   }
+  .experience__title {
+    font-size: 36px;
+  }
   .experience__description {
     margin: 6px 0 0;
     font-size: 18px;
+  }
+  .experience__more-title {
+    font-size: 22px;
   }
   .experience__rail-set {
     gap: 10px;
@@ -1122,8 +1145,11 @@ a {
     margin-top: 60px;
     margin-bottom: 10px;
   }
+  .learning-card__category {
+    font-size: 11px;
+  }
   .learning-card__title {
-    font-size: 24px;
+    font-size: 22px;
   }
   .learning-card__description {
     font-size: 14px;
@@ -1134,14 +1160,32 @@ a {
   .quick-wrap {
     right: 5px;
   }
+  .quick-menu__item {
+    font-size: 11px;
+  }
   .cta-section {
     padding: 70px 0px 140px;
   }
   .cta-section__inner {
     max-width: 900px;
   }
+  .cta-section__title {
+    font-size: 46px;
+  }
+  .cta-section__button {
+    font-size: 18px;
+  }
+  .cta-section__description {
+    font-size: 20px;
+  }
   .bottom-banner {
     width: 900px;
+  }
+  .bottom-banner__title {
+    font-size: 18px;
+  }
+  .bottom-banner__link {
+    font-size: 13px;
   }
 }
 @media (max-width: 1024px) {
@@ -1183,9 +1227,6 @@ a {
   .level__inner {
     max-width: 800px;
   }
-  .level__title {
-    font-size: 32px;
-  }
   .level__description {
     margin: 6px 0 0;
   }
@@ -1196,18 +1237,8 @@ a {
   .level-card__image {
     height: 120px;
   }
-  .level-card__title {
-    font-size: 22px;
-  }
-  .level-card__link {
-    margin-top: 20px;
-    font-size: 14px;
-  }
   .experience {
     padding: 60px 0px 60px;
-  }
-  .experience__title {
-    font-size: 30px;
   }
   .experience__inner {
     max-width: 800px;
@@ -1215,14 +1246,8 @@ a {
   .experience__more {
     margin-top: 40px;
   }
-  .experience__more-title {
-    font-size: 20px;
-  }
   .learning-card {
     border-radius: 26px;
-  }
-  .learning-card__title {
-    font-size: 20px;
   }
   .learning-card__content {
     padding: 22px 0px 26px;
@@ -1240,7 +1265,6 @@ a {
     border-radius: 18px;
   }
   .quick-menu__item {
-    font-size: 10px;
     gap: 0px;
     width: 60px;
     padding: 8px 2px;
@@ -1263,7 +1287,6 @@ a {
   .cta-section__button {
     min-width: 280px;
     min-height: 65px;
-    font-size: 18px;
   }
   .bottom-banner {
     width: 800px;
@@ -1275,12 +1298,6 @@ a {
   }
   .bottom-banner__text {
     gap: 2px;
-  }
-  .bottom-banner__title {
-    font-size: 16px;
-  }
-  .bottom-banner__link {
-    font-size: 12px;
   }
   .bottom-banner__character {
     max-height: 80px;
@@ -1294,9 +1311,6 @@ a {
   .mo {
     display: block;
   }
-  .hero__description {
-    font-size: 18px;
-  }
   .hero__stage {
     position: relative;
     width: 100%;
@@ -1305,13 +1319,13 @@ a {
   }
   .hero__visual--movie {
     width: 110px;
-    margin-left: -200px;
-    top: 160px;
+    margin-left: -180px;
+    top: 140px;
   }
   .hero__visual--book {
-    width: 120px;
-    margin-left: -220px;
-    top: 280px;
+    width: 100px;
+    margin-left: -190px;
+    top: 230px;
   }
   .hero__visual--game {
     width: 80px;
@@ -1320,7 +1334,7 @@ a {
   }
   .hero__visual--studio {
     width: 100px;
-    margin-left: 120px;
+    margin-left: 110px;
     top: 180px;
   }
   .hero__keywords {
@@ -1328,13 +1342,27 @@ a {
     gap: 3px;
   }
   .hero__keyword {
-    padding: 2px 10px;
-    font-size: 14px;
-    min-height: 32px;
+    padding: 0px 10px;
+    min-height: 30px;
+    font-size: 13px;
+  }
+  .hero__description {
+    font-size: 16px;
   }
   .hero__cta {
     min-height: 60px;
     gap: 8px;
+    font-size: 16px;
+    min-width: calc(100% - 160px);
+  }
+  .hero__caption {
+    font-size: 13px;
+  }
+  .hero__title-main, .hero__title-gradient {
+    font-size: 42px;
+  }
+  .hero__title-main {
+    margin-bottom: 4px;
   }
   .level {
     padding: 80px 24px 80px;
@@ -1342,30 +1370,33 @@ a {
   .level__header {
     margin-bottom: 30px;
   }
-  .level__title {
-    font-size: 30px;
-  }
   .level__list {
     grid-template-columns: repeat(1, 1fr);
   }
+  .level__title {
+    font-size: 28px;
+  }
   .level__description {
-    font-size: 20px;
-    line-height: 1.2;
-    margin: 10px 0 0;
+    line-height: 1.28;
+    margin: 6px 0 0;
+    font-size: 16px;
+  }
+  .level-card {
+    min-height: 340px;
   }
   .level-card__title {
-    font-size: 26px;
     font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 22px;
   }
   .level-card__image {
-    height: 140px;
+    height: 120px;
   }
   .level-card__description {
-    font-size: 18px;
     margin: 8px 0 0;
+    font-size: 14px;
   }
   .level-card__link {
-    font-size: 18px;
+    font-size: 14px;
   }
   .experience {
     padding: 80px 0 80px;
@@ -1380,17 +1411,30 @@ a {
   .experience__rail-set img {
     width: 100px;
   }
+  .experience__title {
+    font-size: 28px;
+  }
   .experience__description {
-    font-size: 20px;
+    font-size: 16px;
   }
   .experience__rail {
     margin-top: 14px;
   }
+  .experience__more-title {
+    font-size: 20px;
+  }
+  .learning-card__category {
+    font-size: 10px;
+  }
   .learning-card__title {
-    font-size: 26px;
+    font-size: 20px;
   }
   .learning-card__description {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  .learning-card__link {
+    font-size: 14px;
+    margin-top: 18px;
   }
   .quick-wrap {
     left: 0;
@@ -1416,24 +1460,52 @@ a {
   }
   .quick-menu__item {
     flex: 1;
-    min-width: 0;
     flex-direction: row;
-    height: 60px;
+    height: 40px;
     gap: 5px;
     border-radius: 100px;
-    font-size: 18px;
+    font-size: 14px;
+  }
+  .quick-menu__item span {
+    width: 100%;
+    padding-right: 13px;
+  }
+  .quick-menu__item img {
+    width: 38px;
+    height: 38px;
   }
   .quick-top {
     display: none;
   }
+  .cta-section {
+    padding: 60px 0px 120px;
+  }
   .cta-section__button {
     margin-top: 24px;
   }
+  .cta-section__title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .cta-section__button {
+    font-size: 16px;
+    min-width: calc(100% - 160px);
+    min-height: 60px;
+  }
+  .cta-section__visual {
+    width: calc(100% - 48px);
+  }
+  .cta-section__description {
+    font-size: 16px;
+    line-height: 1.3;
+  }
   .bottom-banner {
     width: 100%;
+    height: 50px;
   }
   .bottom-banner__item {
     justify-content: center;
+    padding: 0 10px;
   }
   .bottom-banner__item img {
     display: none;
@@ -1446,7 +1518,8 @@ a {
   }
   .bottom-banner__title {
     margin-top: 0px;
-    line-height: 1.4;
+    line-height: 1.3;
+    font-size: 13px;
   }
   .bottom-banner__title.pc {
     display: none;
