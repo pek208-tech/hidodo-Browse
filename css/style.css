@@ -860,7 +860,7 @@ a {
   display: flex;
   align-items: center;
   width: 50%;
-  padding: 0 52px;
+  padding: 0 40px;
   border-radius: 30px 30px 0 0;
   color: #fff;
   text-decoration: none;
@@ -881,7 +881,7 @@ a {
 }
 .bottom-banner__title {
   display: block;
-  font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "NanumSquareNeoBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: -0.04em;
@@ -889,6 +889,7 @@ a {
 }
 .bottom-banner__title em {
   font-style: normal;
+  font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 .bottom-banner__title.pc {
   display: block;
@@ -920,7 +921,7 @@ a {
 }
 .bottom-banner__character {
   position: absolute;
-  right: 55px;
+  right: 40px;
   bottom: 0;
   width: auto;
   max-height: 85px;

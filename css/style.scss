@@ -1177,7 +1177,7 @@ a {
     display: flex;
     align-items: center;
     width: 50%;
-    padding: 0 52px;
+    padding: 0 40px;
     border-radius: 30px 30px 0 0;
     color: $color-white;
     text-decoration: none;
@@ -1203,7 +1203,7 @@ a {
 
   &__title {
     display: block;
-    font-family: $font-heavy;
+    font-family: $font-bold;
     font-size: $title-xxsm;
     line-height: 1.2;
     letter-spacing: -0.04em;
@@ -1211,6 +1211,7 @@ a {
 
     em {
       font-style: normal;
+      font-family: $font-heavy;
     }
 
     &.pc {
@@ -1261,7 +1262,7 @@ a {
 
   &__character {
     position: absolute;
-    right: 55px;
+    right: 40px;
     bottom: 0;
     width: auto;
     max-height: 85px;
