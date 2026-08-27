@@ -1528,6 +1528,9 @@ a {
     font-size: 16px;
     line-height: 1.3;
   }
+  .cta-section__description strong {
+    font-family: "NanumSquareNeoExtraBold", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
   .bottom-banner {
     width: 100%;
     height: 50px;
