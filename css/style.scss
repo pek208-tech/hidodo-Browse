@@ -42,10 +42,41 @@ a {
 // ==============================
 // Hero
 // ==============================
-#main-content {
+
+.pc-only {
+  display: block;
+}
+
+.mo-only {
+  display: none;
+}
+
+@media (max-width: $mobile) {
+  .pc-only {
+    display: none;
+  }
+
+  .mo-only {
+    display: block;
+  }
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.hero {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   width: 100%;
   background:
     url("../images/hero-bg.png") center / 1920px auto no-repeat,
@@ -56,19 +87,12 @@ a {
       rgba($color-bg-sub, 1) 70%,
       rgba($color-bg-edge, 1) 100%
     );
-}
-.pc {
-  display: block;
-}
-.mo {
-  display: none;
-}
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
   &__stage {
     position: relative;
     width: 100%;
@@ -1227,14 +1251,6 @@ a {
       font-style: normal;
       font-family: $font-heavy;
     }
-
-    &.pc {
-      display: block;
-    }
-
-    &.mo {
-      display: none;
-    }
   }
 
   &__item--trial &__title {
@@ -1347,10 +1363,8 @@ a {
 // ==============================
 
 @media (max-width: $desktop) {
-  #main-content {
-    background: url("../images/hero-bg.png") center / cover no-repeat;
-  }
   .hero {
+    background: url("../images/hero-bg.png") center / cover no-repeat;
     &__stage {
       position: relative;
       width: 100%;
@@ -1431,9 +1445,6 @@ a {
 // ==============================
 
 @media (max-width: $laptop) {
-  #main-content {
-    background: url("../images/hero-bg.png") center / cover no-repeat;
-  }
   .hero {
     &__stage {
       min-height: 780px;
@@ -1610,9 +1621,6 @@ a {
 // ==============================
 
 @media (max-width: $tablet) {
-  #main-content {
-    background: url("../images/hero-bg.png") center / cover no-repeat;
-  }
   .hero {
     &__stage {
       position: relative;
@@ -1737,12 +1745,6 @@ a {
 // ==============================
 
 @media (max-width: $mobile) {
-  .pc {
-    display: none;
-  }
-  .mo {
-    display: block;
-  }
   .hero {
     &__stage {
       position: relative;
@@ -2011,13 +2013,6 @@ a {
       line-height: 1.3;
       font-size: $mobile-text-xsm;
       padding-top: 3px;
-      &.pc {
-        display: none;
-      }
-
-      &.mo {
-        display: block;
-      }
     }
   }
 }

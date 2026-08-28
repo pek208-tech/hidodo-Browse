@@ -31,20 +31,32 @@ a {
   text-decoration: none;
 }
 
-#main-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background: url("../images/hero-bg.png") center/1920px auto no-repeat, linear-gradient(90deg, #cfdefa 0%, #cfdefa 40%, #d2cbfb 70%, #d2cbfb 100%);
-}
-
-.pc {
+.pc-only {
   display: block;
 }
 
-.mo {
+.mo-only {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .pc-only {
+    display: none;
+  }
+  .mo-only {
+    display: block;
+  }
+}
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .hero {
@@ -52,6 +64,13 @@ a {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  width: 100%;
+  background: url("../images/hero-bg.png") center/1920px auto no-repeat, linear-gradient(90deg, #cfdefa 0%, #cfdefa 40%, #d2cbfb 70%, #d2cbfb 100%);
+}
+.hero__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero__stage {
   position: relative;
@@ -900,12 +919,6 @@ a {
   font-style: normal;
   font-family: "NanumSquareNeoHeavy", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
-.bottom-banner__title.pc {
-  display: block;
-}
-.bottom-banner__title.mo {
-  display: none;
-}
 .bottom-banner__item--trial .bottom-banner__title em {
   color: #fff36a;
 }
@@ -974,7 +987,7 @@ a {
   }
 }
 @media (max-width: 1440px) {
-  #main-content {
+  .hero {
     background: url("../images/hero-bg.png") center/cover no-repeat;
   }
   .hero__stage {
@@ -1049,9 +1062,6 @@ a {
   }
 }
 @media (max-width: 1200px) {
-  #main-content {
-    background: url("../images/hero-bg.png") center/cover no-repeat;
-  }
   .hero__stage {
     min-height: 780px;
   }
@@ -1210,9 +1220,6 @@ a {
   }
 }
 @media (max-width: 1024px) {
-  #main-content {
-    background: url("../images/hero-bg.png") center/cover no-repeat;
-  }
   .hero__stage {
     position: relative;
     width: 100%;
@@ -1326,12 +1333,6 @@ a {
   }
 }
 @media (max-width: 768px) {
-  .pc {
-    display: none;
-  }
-  .mo {
-    display: block;
-  }
   .hero__stage {
     position: relative;
     width: 100%;
@@ -1567,11 +1568,5 @@ a {
     line-height: 1.3;
     font-size: 13px;
     padding-top: 3px;
-  }
-  .bottom-banner__title.pc {
-    display: none;
-  }
-  .bottom-banner__title.mo {
-    display: block;
   }
 }
