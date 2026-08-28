@@ -245,6 +245,15 @@ a {
   transform: rotate(170deg);
 }
 
+.js-hero-animation {
+  visibility: hidden;
+  opacity: 0;
+}
+.js-hero-animation.animate__animated {
+  visibility: visible;
+  opacity: 1;
+}
+
 .level {
   padding: 130px 0px 130px;
 }
@@ -1018,6 +1027,10 @@ a {
   }
   .experience__inner {
     max-width: 1000px;
+  }
+  .experience__rail-set {
+    width: 160px;
+    height: 80px;
   }
   .experience__cards {
     gap: 18px;
