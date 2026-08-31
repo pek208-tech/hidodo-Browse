@@ -243,10 +243,11 @@ a {
     &:hover {
       transform: translateY(-3px);
       box-shadow: 0 16px 32px rgba($color-primary, 0.32);
+      transform: translateX(4px);
     }
 
     &:active {
-      transform: translateY(0);
+      transform: translateY(4px);
     }
 
     &:focus-visible {
@@ -718,6 +719,7 @@ a {
 
   &__more {
     margin-top: 74px;
+    margin-bottom: 20px;
   }
 
   &__more-title {
@@ -763,12 +765,17 @@ a {
       background: url("../images/gradation-r.png") right center / contain
         no-repeat;
     }
+    &:hover {
+    .experience__rail-track {
+      animation-play-state: paused;
+    }
+  }
   }
 
   &__rail-track {
     display: flex;
     width: max-content;
-    animation: rail-scroll 35s linear infinite;
+    animation: rail-scroll 60s linear infinite;
     will-change: transform;
   }
 
@@ -776,6 +783,8 @@ a {
     display: flex;
     flex: 0 0 auto;
     gap: 14px;
+    
+
 
     // 두 세트 사이 간격도 기존 gap과 동일하게
     padding-right: 14px;
@@ -783,7 +792,7 @@ a {
     img {
       flex: 0 0 auto;
       width: 190px;
-      height: 110px;
+      aspect-ratio: 16 / 9;
       border-radius: 10px;
       object-fit: cover;
     }
@@ -791,11 +800,11 @@ a {
 
   @keyframes rail-scroll {
     from {
-      transform: translate3d(0, 0, 0);
+      transform: translateX(0);
     }
 
     to {
-      transform: translate3d(-50%, 0, 0);
+      transform: translateX(-50%);
     }
   }
 }
@@ -1419,8 +1428,9 @@ a {
       max-width: $desktop-content-width;
     }
     &__rail-set {
-      width: 160px;
-      height: 80px;
+      img{
+        width: 160px;
+      }
     }
     &__cards {
       gap: 18px;
@@ -1527,6 +1537,9 @@ a {
       font-size: $laptop-text-sm;
     }
   }
+  .second-line{
+    display: none;
+  }
   .experience {
     padding: $laptop-blank 0px $laptop-blank;
     &__inner {
@@ -1554,10 +1567,8 @@ a {
     }
     &__rail-set {
       gap: 10px;
-      img {
+      img{
         width: 130px;
-        height: auto;
-        gap: 10px;
       }
     }
     &__header {
@@ -1565,7 +1576,7 @@ a {
     }
     &__more {
       margin-top: 60px;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
     }
   }
   .learning-card {
@@ -1871,7 +1882,8 @@ a {
       }
     }
     &__rail-set {
-      img {
+      img{
+        border-radius: 6px;
         width: 90px;
       }
     }

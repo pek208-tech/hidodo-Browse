@@ -178,9 +178,10 @@ a {
 .hero__cta:hover {
   transform: translateY(-3px);
   box-shadow: 0 16px 32px rgba(73, 48, 239, 0.32);
+  transform: translateX(4px);
 }
 .hero__cta:active {
-  transform: translateY(0);
+  transform: translateY(4px);
 }
 .hero__cta:focus-visible {
   outline: 3px solid rgba(54, 122, 245, 0.4);
@@ -520,6 +521,7 @@ a {
 }
 .experience__more {
   margin-top: 74px;
+  margin-bottom: 20px;
 }
 .experience__more-title {
   margin: 0;
@@ -555,10 +557,13 @@ a {
   right: 0;
   background: url("../images/gradation-r.png") right center/contain no-repeat;
 }
+.experience__rail:hover .experience__rail-track {
+  animation-play-state: paused;
+}
 .experience__rail-track {
   display: flex;
   width: max-content;
-  animation: rail-scroll 35s linear infinite;
+  animation: rail-scroll 60s linear infinite;
   will-change: transform;
 }
 .experience__rail-set {
@@ -570,16 +575,16 @@ a {
 .experience__rail-set img {
   flex: 0 0 auto;
   width: 190px;
-  height: 110px;
+  aspect-ratio: 16/9;
   border-radius: 10px;
   object-fit: cover;
 }
 @keyframes rail-scroll {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
   to {
-    transform: translate3d(-50%, 0, 0);
+    transform: translateX(-50%);
   }
 }
 
@@ -1041,9 +1046,8 @@ a {
   .experience__inner {
     max-width: 1000px;
   }
-  .experience__rail-set {
+  .experience__rail-set img {
     width: 160px;
-    height: 80px;
   }
   .experience__cards {
     gap: 18px;
@@ -1136,6 +1140,9 @@ a {
     margin: 10px 0 0;
     font-size: 14px;
   }
+  .second-line {
+    display: none;
+  }
   .experience {
     padding: 70px 0px 70px;
   }
@@ -1166,15 +1173,13 @@ a {
   }
   .experience__rail-set img {
     width: 130px;
-    height: auto;
-    gap: 10px;
   }
   .experience__header {
     margin-bottom: 30px;
   }
   .experience__more {
     margin-top: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
   }
   .learning-card__category {
     font-size: 11px;
@@ -1447,6 +1452,7 @@ a {
     top: -15px;
   }
   .experience__rail-set img {
+    border-radius: 6px;
     width: 90px;
   }
   .experience__title {
